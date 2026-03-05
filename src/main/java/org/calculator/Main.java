@@ -15,7 +15,8 @@ public class Main {
 
             System.out.println("Choose operation:");
             System.out.println("1 → Square Root");
-            System.out.println("2 → Exit");
+            System.out.println("2 → Factorial of x");
+            System.out.println("3 → Exit");
 
             int choice = sc.nextInt();
 
@@ -27,8 +28,17 @@ public class Main {
                 double result = calc.squareRoot(num);
 
                 System.out.println("Result = " + result);
-            }
-            else if(choice == 2){
+            } else if (choice == 2) {
+
+                System.out.println("Enter x:");
+                int num = sc.nextInt();
+
+                long result = calc.factorial(num);
+
+                System.out.println("Factorial is " + result);
+
+
+            } else if(choice == 3){
 
                 System.out.println("Exiting calculator...");
                 break;
