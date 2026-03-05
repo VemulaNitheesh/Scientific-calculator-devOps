@@ -9,64 +9,34 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Calculator calc = new Calculator();
 
-        System.out.println("Calculator");
+        System.out.println("Scientific Calculator");
 
-        while (true) {
-
-            int choice = -1;
+        while(true){
 
             System.out.println("Choose operation:");
-            System.out.println("1 → Addition");
-            System.out.println("2 → Subtraction");
-            System.out.println("3 → Exit");
+            System.out.println("1 → Square Root");
+            System.out.println("2 → Exit");
 
-            if (sc.hasNextInt()) {
-                choice = sc.nextInt();
-            } else {
-                System.out.println("Invalid input. Try again.");
-                sc.next();
-                continue;
+            int choice = sc.nextInt();
+
+            if(choice == 1){
+
+                System.out.println("Enter number:");
+                double num = sc.nextDouble();
+
+                double result = calc.squareRoot(num);
+
+                System.out.println("Result = " + result);
             }
+            else if(choice == 2){
 
-            if (choice == 3) {
                 System.out.println("Exiting calculator...");
                 break;
             }
+            else{
 
-            if (choice != 1 && choice != 2) {
-                System.out.println("Invalid choice. Try again.");
-                continue;
+                System.out.println("Invalid choice");
             }
-
-            System.out.println("Enter first number:");
-
-            if (!sc.hasNextDouble()) {
-                System.out.println("Invalid number.");
-                sc.next();
-                continue;
-            }
-
-            double a = sc.nextDouble();
-
-            System.out.println("Enter second number:");
-
-            if (!sc.hasNextDouble()) {
-                System.out.println("Invalid number.");
-                sc.next();
-                continue;
-            }
-
-            double b = sc.nextDouble();
-
-            double result;
-
-            if (choice == 1) {
-                result = calc.add(a, b);
-            } else {
-                result = calc.subtract(a, b);
-            }
-
-            System.out.println("Result = " + result);
         }
 
         sc.close();
