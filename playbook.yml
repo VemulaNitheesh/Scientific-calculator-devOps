@@ -20,4 +20,4 @@
       command: docker pull nitheesh05/calculator:latest
 
     - name: Run container
-      command: docker run -d --name calculator-container nitheesh05/calculator:latest
+      command: docker run -it -d --name calculator-container nitheesh05/calculator:latest
