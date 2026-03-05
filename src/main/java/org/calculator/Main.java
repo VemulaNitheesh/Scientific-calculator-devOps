@@ -43,11 +43,11 @@ public class Main {
             } else if(choice == 3){
 
                 System.out.println("Enter base:");
-                int x = sc.nextInt();
+                double x = sc.nextInt();
                 System.out.println("Enter exponent:");
-                int y = sc.nextInt();
+                double y = sc.nextInt();
 
-                long result = calc.power(x,y);
+                double result = calc.power(x,y);
                 System.out.println("Result = "+result);
 
 
