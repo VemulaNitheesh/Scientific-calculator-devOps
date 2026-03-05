@@ -14,9 +14,11 @@ public class Main {
         while(true){
 
             System.out.println("Choose operation:");
-            System.out.println("1 → Square Root");
-            System.out.println("2 → Factorial of x");
-            System.out.println("3 → Exit");
+            System.out.println("1 . Square Root");
+            System.out.println("2 . Factorial of x");
+            System.out.println("3 . find x power y");
+            System.out.println("4 . Find log(x)");
+            System.out.println("3 . Exit");
 
             int choice = sc.nextInt();
 
@@ -40,11 +42,29 @@ public class Main {
 
             } else if(choice == 3){
 
+                System.out.println("Enter base:");
+                int x = sc.nextInt();
+                System.out.println("Enter exponent:");
+                int y = sc.nextInt();
+
+                long result = calc.power(x,y);
+                System.out.println("Result = "+result);
+
+
+            }
+            else if(choice == 4){
+
+                System.out.println("Enter number :");
+                double num = sc.nextDouble();
+                double result = calc.naturalLog(num);
+                System.out.println("Result :" +result);
+
+            }
+            else if(choice == 5){
                 System.out.println("Exiting calculator...");
                 break;
             }
             else{
-
                 System.out.println("Invalid choice");
             }
         }

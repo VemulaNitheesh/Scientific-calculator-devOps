@@ -15,4 +15,11 @@ public class Calculator {
 
         return result;
     }
+    public long power(int base, int exponent){
+        return (long) Math.pow(base, exponent);
+    }
+
+    public double naturalLog(double x){
+        return Math.log(x);
+    }
 }
