@@ -18,7 +18,7 @@ public class Main {
             System.out.println("2 . Factorial of x");
             System.out.println("3 . find x power y");
             System.out.println("4 . Find log(x)");
-            System.out.println("3 . Exit");
+            System.out.println("5 . Exit");
 
             int choice = sc.nextInt();
 
