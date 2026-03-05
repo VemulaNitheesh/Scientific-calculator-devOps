@@ -1,0 +1,23 @@
+- hosts: myhosts
+  connection: local
+  become: no
+
+  tasks:
+
+    - name: Stop old container
+      command: docker stop calculator-container
+      ignore_errors: yes
+
+    - name: Remove old container
+      command: docker rm calculator-container
+      ignore_errors: yes
+
+    - name: Remove old image
+      command: docker rmi calculator-image
+      ignore_errors: yes
+
+    - name: Pull latest image
+      command: docker pull nitheesh05/calculator:latest
+
+    - name: Run container
+      command: docker run -d --name calculator-container nitheesh05/calculator:latest
