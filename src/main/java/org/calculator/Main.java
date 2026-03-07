@@ -9,7 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Calculator calc = new Calculator();
 
-        System.out.println("Scientific Calculator");
+        System.out.println("Scientific Calculator:");
 
         while(true){
 
