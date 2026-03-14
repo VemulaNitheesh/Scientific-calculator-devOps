@@ -13,7 +13,7 @@ public class Calculator {
             result = result * i;
         }
 
-        return result;
+        return result ;
     }
     public double power(double base, double exponent){
         return Math.pow(base, exponent);
